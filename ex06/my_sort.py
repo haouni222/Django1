@@ -21,7 +21,7 @@ def my_sort():
 'Thompson' : '1949',
 'Burton' : '1939',
 }
-    sorted_dict = dict(sorted(d.items(), key=lambda item: item[1]))
+    sorted_dict = dict(sorted(d.items(), key=lambda item: (item[1], item[0])))
     for key, value in sorted_dict.items():
         print(f"{key} : {value}")
 

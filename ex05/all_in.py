@@ -24,6 +24,13 @@ def the_dict():
     
     string = sys.argv[1]
     split = string.split(',')
+    
+    hold = None
+    for char in string:
+        if hold is not None: 
+            if hold == ',' and char == ',':
+                return
+        hold = char
 
     for item in split:
         item = item.strip()
